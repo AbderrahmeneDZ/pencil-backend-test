@@ -1,13 +1,13 @@
-import { Document, Model, ObjectId } from "mongoose";
+import { Document, Model, Types } from "mongoose";
 
 interface ITopic {
   name: String;
-  path: ObjectId[];
-  tree: ObjectId[];
+  path: Types.ObjectId[];
+  tree: Types.ObjectId[];
 }
 
-interface ITopicDocument extends Document {}
+interface ITopicDocument extends ITopic, Document {}
 
-interface ITopicModel extends Model<ITopic, ITopicDocument> {}
+interface ITopicModel extends Model<ITopicDocument> {}
 
 export { ITopic, ITopicDocument, ITopicModel };

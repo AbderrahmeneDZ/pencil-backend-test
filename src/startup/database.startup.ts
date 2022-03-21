@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import debug from "debug";
+import dbMigration from "../migrations";
 
 const log = debug("App:[MONGOOSE]");
 
@@ -13,6 +14,7 @@ export default () => {
         process.exit(1);
       }
 
+      dbMigration();
       log("Database connected");
     }
   );
