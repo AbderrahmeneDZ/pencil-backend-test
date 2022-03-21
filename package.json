@@ -4,7 +4,10 @@
   "description": "Pencil Backend Test",
   "main": "app.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev": "NODE_ENV=development PORT=8888 nodemon src/app.ts",
+    "build": "tsc build",
+    "serve": "NODE_ENV=production PORT=8080 node src/app.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/AbderrahmeneDZ/pencil-backend-test/issues"
   },
-  "homepage": "https://github.com/AbderrahmeneDZ/pencil-backend-test#readme"
+  "homepage": "https://github.com/AbderrahmeneDZ/pencil-backend-test#readme",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "express": "^4.17.3"
+  }
 }
