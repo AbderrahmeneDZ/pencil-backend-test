@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "dev": "DEBUG=App:* NODE_ENV=development PORT=8888 nodemon src/app.ts",
-    "build": "tsc build",
+    "build": "tsc",
     "serve": "NODE_ENV=production PORT=8080 node src/app.js"
   },
   "repository": {
