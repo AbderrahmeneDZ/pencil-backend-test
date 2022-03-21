@@ -1,0 +1,26 @@
+{
+  "name": "pencil-backend-test",
+  "version": "1.0.0",
+  "description": "Pencil Backend Test",
+  "main": "app.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbderrahmeneDZ/pencil-backend-test.git"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "mongodb",
+    "pencil",
+    "backend"
+  ],
+  "author": "Abderrahmene Bouidia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbderrahmeneDZ/pencil-backend-test/issues"
+  },
+  "homepage": "https://github.com/AbderrahmeneDZ/pencil-backend-test#readme"
+}
