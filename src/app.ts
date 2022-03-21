@@ -1,13 +1,17 @@
 import express from "express";
 import env from "dotenv";
+import fs from "fs";
 
 import databaseStartup from "./startup/database.startup";
 import routesStartup from "./startup/routes.startup";
 import errorHandlerStartup from "./startup/error-handler.startup";
 
-if (process.env.NODE_ENV !== "production") {
-  env.config({ path: ".env" });
+// load env file
+if (!fs.existsSync(".env")) {
+  console.log("Could not find .env file");
+  process.exit(1);
 }
+env.config({ path: ".env" });
 
 const app = express();
 
