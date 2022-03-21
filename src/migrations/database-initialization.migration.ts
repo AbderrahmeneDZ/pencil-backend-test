@@ -63,10 +63,10 @@ const getQuestions = (topics: ITopicDocument[]) => {
     const No = question["Question number"];
     const annotations = Object.keys(question)
       .filter((key: string) => key.startsWith("Annotation ") && question[key])
-      .map((pair: any) => {
-        const [key, value] = pair;
-        const id = topics.find((topic) => topic.name === value);
-        return id;
+      .map((key: string) => {
+        const value = question[key];
+        const topic = topics.find((topic) => topic.name === value);
+        return topic?._id;
       });
 
     return {
