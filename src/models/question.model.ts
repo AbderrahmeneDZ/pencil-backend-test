@@ -12,7 +12,7 @@ const schema = new Schema<IQuestionDocument>({
   },
   annotations: {
     type: [Schema.Types.ObjectId],
-    ref: "topics",
+    ref: "Topics",
   },
 });
 

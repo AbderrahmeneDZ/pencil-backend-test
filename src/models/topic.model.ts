@@ -8,11 +8,11 @@ const schema = new Schema<ITopicDocument>({
   },
   path: {
     type: [Schema.Types.ObjectId],
-    ref: "topics",
+    ref: "Topics",
   },
   tree: {
     type: [Schema.Types.ObjectId],
-    ref: "topics",
+    ref: "Topics",
   },
 });
 
