@@ -7,11 +7,9 @@ import routesStartup from "./startup/routes.startup";
 import errorHandlerStartup from "./startup/error-handler.startup";
 
 // load env file
-if (!fs.existsSync(".env")) {
-  console.log("Could not find .env file");
-  process.exit(1);
+if (fs.existsSync(".env")) {
+  env.config({ path: ".env" });
 }
-env.config({ path: ".env" });
 
 const app = express();
 
