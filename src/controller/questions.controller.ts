@@ -41,6 +41,7 @@ const getQuestionsOfTopic = async (req: Request, res: Response) => {
     },
     {
       $project: {
+        _id: 0,
         No: "$questions.No",
       },
     },

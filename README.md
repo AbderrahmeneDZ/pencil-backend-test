@@ -19,10 +19,10 @@ Pencil Backend Test
 
 ##### Topics :
 
-- paginate questions
+- paginate topics
   `/api/v1/topics?page=0&pagesize=10`
 - get question by id
-  `/api/v1/topics{ObjectId}`
+  `/api/v1/topics/{ObjectId}`
 
 ##### Questions :
 
@@ -32,3 +32,7 @@ Pencil Backend Test
   `/api/v1/questions?page=0&pagesize=10`
 - get question by id
   `/api/v1/questions/{ObjectId}`
+
+### Postman :
+
+You can import and test all routes via this link `https://www.getpostman.com/collections/6d50397b3cb2b9a412cf`
