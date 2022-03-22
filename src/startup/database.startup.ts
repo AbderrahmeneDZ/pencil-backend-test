@@ -2,7 +2,8 @@ import mongoose from "mongoose";
 import debug from "debug";
 import dbMigration from "../migrations";
 
-const log = debug("App:[MONGOOSE]");
+const log =
+  process.env.NODE_ENV === "production" ? console.log : debug("App:[MONGOOSE]");
 
 export default () => {
   const { DB_PROTOCOL, DB_HOST, DB_USER, DB_PASSWORD, DB_NAME } = process.env;
